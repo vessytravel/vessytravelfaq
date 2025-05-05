@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions - Vessy Travel</title>
+    <meta name="description" content="Find answers to common questions about luxury travel planning, destinations, and services offered by Vessy Travel LLC, your boutique travel agency based in Greater Houston, Texas.">
+    <meta name="keywords" content="Vessy Travel FAQ, luxury travel, travel planning, boutique travel agency, African safaris, European tours, Caribbean resorts">
+    <meta name="author" content="Vessy Travel LLC">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.vessytravel.com/faq" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1e4976; /* Dark blue from Vessy Travel */
+            --secondary-color: #3a8bbb; /* Light blue from Vessy Travel */
+            --accent-color: #0d7ea2; /* Medium blue from Vessy Travel */
+            --text-color: #333;
+            --bg-color: #f4f4f4;
+            --white: #fff;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header */
+        header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* FAQ Navigation Boxes */
+        .faq-nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+        .faq-nav-box {
+            background: var(--white);
+            border-radius: 6px;
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .faq-nav-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .faq-nav-box h3 {
+            font-size: 1rem;
+            color: var(--text-color);
+            margin: 0;
+        }
+        /* Blog Post */
+        .blog-post {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        .blog-post h1 {
+            color: var(--text-color);
+            text-align: center;
+        }
+        .blog-post p {
+            color: #555;
+        }
+        /* FAQ Section */
+        .faq-container {
+            padding: 40px 0;
+        }
+        .faq-container h1 {
+            text-align: center;
+            color: var(--text-color);
+            margin-bottom: 40px;
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .faq-box {
+            background: var(--white);
+            border-radius: 8px;
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .faq-box h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .accordion {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .accordion-question {
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--text-color);
+            padding: 15px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .accordion-question::after {
+            content: '\25BC';
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+        .accordion-question.active::after {
+            transform: rotate(180deg);
+        }
+        .accordion-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: #555;
+            padding: 0 15px;
+        }
+        .accordion-answer p {
+            margin: 15px 0;
+        }
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: var(--white);
+            text-decoration: underline;
+        }
+        footer a:hover {
+            text-decoration: none;
+        }
+        /* Travel Summary Section */
+        .travel-summary {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border: 2px solid var(--accent-color);
+            padding: 30px;
+            background-color: var(--white);
+            border-radius: 8px;
+        }
+        .travel-summary h2 {
+            font-size: 1.8rem;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        .travel-summary p {
+            margin-bottom: 15px;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .faq-nav {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+            .faq-nav-box h3 {
+                font-size: 0.9rem;
+            }
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+            .faq-box {
+                padding: 15px;
+            }
+            .accordion-question {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Frequently Asked Questions About Vessy Travel</h1>
+            <p>Find answers to common questions about our luxury travel services, destinations, and planning process. We're dedicated to creating bespoke adventures tailored to your unique preferences.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- FAQ Navigation Boxes -->
+        <nav class="faq-nav">
+            <div class="faq-nav-box" onclick="scrollToFAQ()">
+                <h3>About Vessy Travel</h3>
+            </div>
+            <div class="faq-nav-box" onclick="scrollToFAQ()">
+                <h3>Travel Planning Process</h3>
+            </div>
+            <div class="faq-nav-box" onclick="scrollToFAQ()">
+                <h3>Destinations & Experiences</h3>
+            </div>
+            <div class="faq-nav-box" onclick="scrollToFAQ()">
+                <h3>Pricing & Booking</h3>
+            </div>
+            <div class="faq-nav-box" onclick="scrollToFAQ()">
+                <h3>Special Requests & Customization</h3>
+            </div>
+            <div class="faq-nav-box" onclick="scrollToFAQ()">
+                <h3>Travel Support & Assistance</h3>
+            </div>
+        </nav>
+
+        <section id="faq-section" class="faq-container">
+            <h2 class="text-2xl font-bold text-center mb-10">Your Questions Answered</h2>
+            <div class="faq-grid">
+                <section class="faq-box">
+                    <h3>About Vessy Travel</h3>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">What is Vessy Travel?</button>
+                        <div class="accordion-answer">
+                            <p>Vessy Travel LLC is a boutique travel agency based in Greater Houston, Texas. We specialize in custom-tailored, luxury adventures that are perfectly matched to your needs and preferences. Our expertise spans across a wide range of destinations including Europe, Africa, Antarctica, and many lesser-known locations around the world.</p>
+                            <p>As a dedicated luxury travel agency, we pride ourselves on creating unique experiences that go beyond the standard vacation. We work closely with each client to understand their travel dreams and preferences, then craft journeys that exceed expectations.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">What types of travelers do you work with?</button>
+                        <div class="accordion-answer">
+                            <p>At Vessy Travel, we love working with diverse clients who appreciate personalized travel experiences. Our services are particularly well-suited for:</p>
+                            <p>• Families seeking memorable vacations with age-appropriate activities</p>
+                            <p>• Groups looking for seamless coordination of multi-traveler itineraries</p>
+                            <p>• Honeymooners desiring romantic and unforgettable experiences</p>
+                            <p>• Solo travelers wanting safe, enriching, and well-planned adventures</p>
+                            <p>Whether you're celebrating a special occasion, planning an annual family trip, or embarking on a solo adventure, we're equipped to design the perfect journey for your specific needs.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">What makes Vessy Travel different from other travel agencies?</button>
+                        <div class="accordion-answer">
+                            <p>Vessy Travel stands out through our deeply personalized approach to travel planning. Unlike larger agencies, we take the time to truly understand your preferences, travel style, and aspirations. We pride ourselves on:</p>
+                            <p>• Strong local connections in destinations worldwide, giving you access to authentic experiences</p>
+                            <p>• Meticulous attention to detail in every aspect of your journey</p>
+                            <p>• A genuine passion for creating transformative travel experiences</p>
+                            <p>• Comprehensive support before, during, and after your travels</p>
+                            <p>• Exclusive focus on quality over quantity - we limit our client base to ensure exceptional service</p>
+                            <p>Our clients consistently tell us that our personalized approach and dedication to excellence create travel experiences that far exceed their expectations.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="faq-box">
+                    <h3>Travel Planning Process</h3>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">How does the travel planning process work?</button>
+                        <div class="accordion-answer">
+                            <p>Our travel planning process is designed to be thorough yet straightforward:</p>
+                            <p><strong>1. Consultation:</strong> We begin with an in-depth conversation about your travel dreams, preferences, budget, and any special requirements. This helps us understand exactly what you're looking for.</p>
+                            <p><strong>2. Customization:</strong> Based on our consultation, we research and design a personalized itinerary tailored specifically to your needs. This includes accommodations, activities, transportation, and special experiences.</p>
+                            <p><strong>3. Refinement:</strong> We present the proposed itinerary to you and make any adjustments needed until it perfectly matches your vision.</p>
+                            <p><strong>4. Booking:</strong> Once you approve the final plan, we handle all the reservations and logistics, ensuring everything is confirmed and organized.</p>
+                            <p><strong>5. Support:</strong> Throughout your journey, we provide ongoing support and assistance, addressing any questions or concerns that may arise.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">How far in advance should I start planning my trip?</button>
+                        <div class="accordion-answer">
+                            <p>For the best experience and most options, we recommend starting your travel planning process:</p>
+                            <p>• 9-12 months ahead for peak-season travel, special occasions like honeymoons, or trips to destinations with limited accommodations</p>
+                            <p>• 6-9 months ahead for most international journeys</p>
+                            <p>• 3-6 months ahead for less complex domestic trips</p>
+                            <p>Planning well in advance allows us to secure the best accommodations, expert guides, and exclusive experiences that might otherwise be unavailable. It also gives us time to carefully craft every detail of your journey.</p>
+                            <p>That said, we understand that sometimes travel opportunities arise unexpectedly. We're always happy to work with shorter timeframes when necessary and will do our utmost to create an exceptional experience regardless of the planning window.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">What information do you need from me to start planning?</button>
+                        <div class="accordion-answer">
+                            <p>To begin crafting your perfect journey, we'll need some essential information:</p>
+                            <p>• Destination interests or specific locations you wish to visit</p>
+                            <p>• Approximate travel dates and duration</p>
+                            <p>• Number of travelers and their ages (if traveling with children)</p>
+                            <p>• Accommodation preferences (luxury hotels, boutique properties, villas, etc.)</p>
+                            <p>• Special interests or activities you'd like to experience</p>
+                            <p>• Previous travel experiences you've particularly enjoyed</p>
+                            <p>• Budget guidelines to help us plan appropriately</p>
+                            <p>• Any mobility considerations or special requirements</p>
+                            <p>The more details you can provide, the better we can tailor our recommendations to match your preferences. Don't worry if you're unsure about some aspects—part of our job is helping you explore the possibilities!</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="faq-box">
+                    <h3>Destinations & Experiences</h3>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">What destinations do you specialize in?</button>
+                        <div class="accordion-answer">
+                            <p>At Vessy Travel, we offer expertise in a wide range of destinations across the globe. Some of our key specialties include:</p>
+                            <p>• <strong>African Safaris:</strong> Expertly planned wildlife experiences in destinations like Tanzania, Kenya, South Africa, and Botswana</p>
+                            <p>• <strong>European Tours:</strong> From historical explorations in Italy, France, and the UK to off-the-beaten-path discoveries in Eastern Europe</p>
+                            <p>• <strong>Caribbean Luxury:</strong> Exclusive resorts and villa experiences in destinations like Antigua, St. Barths, and other tropical paradises</p>
+                            <p>• <strong>Asian Adventures:</strong> Cultural immersion in countries like Cambodia, Sri Lanka, Japan, and Thailand</p>
+                            <p>• <strong>South American Journeys:</strong> From Machu Picchu to Patagonia and the Amazon</p>
+                            <p>We also regularly arrange travel to Antarctica, Australia, New Zealand, and many other destinations. If you have a specific location in mind that isn't listed here, please ask—we likely have experience there or can leverage our global network to create an exceptional experience for you.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">What types of travel experiences can you arrange?</button>
+                        <div class="accordion-answer">
+                            <p>We design a diverse array of travel experiences to match your interests and preferences:</p>
+                            <p>• <strong>Wildlife Adventures:</strong> Safari experiences, marine wildlife encounters, bird watching expeditions</p>
+                            <p>• <strong>Cultural Immersion:</strong> Guided historical tours, art explorations, cooking classes, local community interactions</p>
+                            <p>• <strong>Luxury Relaxation:</strong> Exclusive beach resorts, spa retreats, private villa stays</p>
+                            <p>• <strong>Active Adventures:</strong> Hiking, biking, water sports, golf vacations</p>
+                            <p>• <strong>Culinary Journeys:</strong> Food tours, wine region explorations, dining at renowned restaurants</p>
+                            <p>• <strong>Special Occasions:</strong> Honeymoons, milestone birthdays, anniversaries, family reunions</p>
+                            <p>• <strong>Educational Travel:</strong> Family learning experiences, student groups, special interest tours</p>
+                            <p>We excel at combining multiple types of experiences within a single journey, creating a balanced itinerary that reflects your interests while introducing you to new possibilities.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">Can you arrange family-friendly vacations?</button>
+                        <div class="accordion-answer">
+                            <p>Absolutely! Family vacations are one of our specialties. We understand that traveling with children of different ages requires thoughtful planning to ensure everyone has a memorable experience.</p>
+                            <p>Our family-friendly vacations include:</p>
+                            <p>• Accommodations with appropriate room configurations and amenities for families</p>
+                            <p>• Age-appropriate activities that engage children while still being enjoyable for adults</p>
+                            <p>• Educational experiences that are fun and interactive</p>
+                            <p>• Balanced itineraries with appropriate pacing for families</p>
+                            <p>• Transportation arrangements that consider the needs of children</p>
+                            <p>• Dining options that accommodate younger palates</p>
+                            <p>We take into account the ages and interests of your children to recommend destinations and experiences that will create lasting family memories. From safari adventures that captivate children of all ages to European explorations with interactive historical components, we can design the perfect family journey.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="faq-box">
+                    <h3>Pricing & Booking</h3>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">How does pricing work for your services?</button>
+                        <div class="accordion-answer">
+                            <p>Our pricing structure is designed to be transparent while reflecting the value of our personalized service:</p>
+                            <p>• We typically charge a planning fee that covers the extensive research, design, and coordination of your custom itinerary. This fee varies based on the complexity of the trip and number of travelers.</p>
+                            <p>• The total trip cost includes all accommodations, activities, specified meals, transfers, and other elements outlined in your final itinerary.</p>
+                            <p>• We provide a detailed breakdown of costs so you understand exactly what's included in your package.</p>
+                            <p>• Our relationships with luxury properties and experience providers often allow us to secure added amenities and perks not available to the general public, enhancing the value of your investment.</p>
+                            <p>We work with a range of budgets and are always upfront about costs. Our goal is to create extraordinary experiences that represent excellent value for the investment, focusing on quality rather than simply finding the lowest price.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">What is your payment and cancellation policy?</button>
+                        <div class="accordion-answer">
+                            <p>Our standard payment and cancellation policies are as follows, though they may vary slightly depending on specific supplier requirements:</p>
+                            <p><strong>Payment Schedule:</strong></p>
+                            <p>• Planning fee: Due at the time of engagement</p>
+                            <p>• Initial deposit: 25-30% of the total trip cost due upon approval of the itinerary</p>
+                            <p>• Final payment: Typically due 60-90 days before departure, depending on the destination</p>
+                            <p><strong>Cancellation Policy:</strong></p>
+                            <p>• Planning fees are non-refundable as they cover work already performed</p>
+                            <p>• 120+ days before departure: Full refund of deposit (minus any non-refundable elements)</p>
+                            <p>• 90-119 days: 75% refund of deposit</p>
+                            <p>• 60-89 days: 50% refund of deposit</p>
+                            <p>• Under 60 days: Non-refundable</p>
+                            <p>We strongly recommend purchasing comprehensive travel insurance to protect your investment. We can advise on appropriate insurance options for your specific journey.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">Do you offer travel insurance?</button>
+                        <div class="accordion-answer">
+                            <p>While we don't directly sell travel insurance, we strongly recommend it for all travelers and can connect you with reputable providers who offer comprehensive coverage.</p>
+                            <p>Quality travel insurance typically covers:</p>
+                            <p>• Trip cancellation and interruption</p>
+                            <p>• Emergency medical expenses and evacuation</p>
+                            <p>• Lost or delayed baggage</p>
+                            <p>• Travel delays</p>
+                            <p>• Certain COVID-19 related disruptions (policy dependent)</p>
+                            <p>We can help you assess your specific needs and recommend appropriate coverage levels based on your destination, activities, and other factors. This allows you to make an informed decision and secure the protection that's right for your journey.</p>
+                            <p>In today's unpredictable travel environment, insurance is an essential component of responsible travel planning, particularly for premium experiences with significant financial investment.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="faq-box">
+                    <h3>Special Requests & Customization</h3>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">Can you accommodate dietary restrictions or special needs?</button>
+                        <div class="accordion-answer">
+                            <p>Absolutely! We take pride in accommodating all dietary restrictions, medical requirements, and special needs to ensure your journey is comfortable and enjoyable.</p>
+                            <p>For dietary requirements, we:</p>
+                            <p>• Inform all accommodations and restaurants about your specific needs in advance</p>
+                            <p>• Select dining venues that can properly accommodate restrictions</p>
+                            <p>• Arrange private dining experiences with custom menus when appropriate</p>
+                            <p>• Provide recommendations for specialty food shops at your destination</p>
+                            <p>For mobility or other special needs, we:</p>
+                            <p>• Research and confirm accessibility at all accommodations and attractions</p>
+                            <p>• Arrange appropriate transportation throughout your journey</p>
+                            <p>• Modify activities and pacing to suit your specific requirements</p>
+                            <p>• Connect you with medical resources at your destination if needed</p>
+                            <p>Please share all relevant information during our initial consultation so we can make appropriate arrangements from the start of the planning process.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">Can you help plan special celebrations or surprise events?</button>
+                        <div class="accordion-answer">
+                            <p>Crafting memorable celebrations and surprise moments is one of our specialties! We delight in adding those extra-special touches that transform a great trip into an unforgettable experience.</p>
+                            <p>We can arrange a variety of special experiences such as:</p>
+                            <p>• Private dinners in extraordinary locations (beachfront, historic venues, underwater restaurants)</p>
+                            <p>• Anniversary celebrations with custom touches reflecting your journey together</p>
+                            <p>• Birthday surprises with personalized cakes and decorations</p>
+                            <p>• Proposal planning with photographers to capture the moment</p>
+                            <p>• Exclusive access to attractions outside normal hours</p>
+                            <p>• Private performances by local musicians or artists</p>
+                            <p>• Custom welcome gifts and amenities</p>
+                            <p>With our extensive network of local partners, we can create bespoke moments that perfectly match your vision. We're also experts at keeping secrets when planning surprise elements!</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">Do you arrange group travel?</button>
+                        <div class="accordion-answer">
+                            <p>Yes, we specialize in planning sophisticated group travel experiences. Whether it's a family reunion, friends' getaway, corporate retreat, or special interest group, we have the expertise to coordinate complex multi-traveler itineraries.</p>
+                            <p>Our group travel planning includes:</p>
+                            <p>• Accommodations that keep your group appropriately connected while respecting privacy</p>
+                            <p>• Private transportation sized appropriately for your group</p>
+                            <p>• Group activities balanced with options for individual exploration</p>
+                            <p>• Private dining experiences and special events</p>
+                            <p>• Coordination of varying arrival/departure schedules</p>
+                            <p>• Management of different preferences within the group</p>
+                            <p>We excel at creating itineraries that satisfy diverse interests while maintaining the cohesive group experience you desire. For larger groups, we can also provide a custom website with trip details and updates to keep everyone informed.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="faq-box">
+                    <h3>Travel Support & Assistance</h3>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">What kind of support do you provide during my trip?</button>
+                        <div class="accordion-answer">
+                            <p>We provide comprehensive support throughout your journey to ensure peace of mind and swift resolution of any issues that may arise:</p>
+                            <p>• <strong>24/7 Emergency Assistance:</strong> Access to our team for urgent matters at any time during your travels</p>
+                            <p>• <strong>Detailed Documentation:</strong> Comprehensive digital and/or printed travel documents with all necessary information</p>
+                            <p>• <strong>Local Contacts:</strong> Direct connections to our on-the-ground partners at your destination</p>
+                            <p>• <strong>Proactive Monitoring:</strong> We track potential disruptions (weather, strikes, etc.) and adjust your plans as needed</p>
+                            <p>• <strong>Real-time Updates:</strong> Immediate notification of any changes to your itinerary</p>
+                            <p>• <strong>Problem Resolution:</strong> Swift intervention if accommodations, activities, or transportation don't meet expectations</p>
+                            <p>Our support extends from the moment you leave home until your safe return. We're never more than a message or call away, ready to assist with both emergencies and everyday questions or requests.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">What travel documents will I need?</button>
+                        <div class="accordion-answer">
+                            <p>Required travel documents vary by destination, but we provide detailed guidance throughout the planning process. Generally, you should be prepared with:</p>
+                            <p>• <strong>Passport:</strong> Valid for at least 6 months beyond your return date with sufficient blank pages</p>
+                            <p>• <strong>Visas:</strong> Required for many destinations; we'll advise on specific requirements and application procedures</p>
+                            <p>• <strong>Travel Insurance:</strong> Documentation of your policy</p>
+                            <p>• <strong>Vaccination Records:</strong> Including any destination-specific requirements</p>
+                            <p>• <strong>Driver's License:</strong> If you plan to drive (and possibly an International Driving Permit)</p>
+                            <p>• <strong>Travel Itinerary:</strong> Comprehensive documentation we provide with confirmations and contact information</p>
+                            <p>We'll provide a detailed checklist specific to your journey and can answer any questions about documentation requirements. For certain destinations, we can also arrange expedited visa services through our trusted partners.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <button class="accordion-question" aria-expanded="false">How do you handle unexpected issues during travel?</button>
+                        <div class="accordion-answer">
+                            <p>We approach unexpected issues with swift, solution-oriented action. Our process for handling travel disruptions includes:</p>
+                            <p>• <strong>Immediate Assessment:</strong> Quickly evaluating the situation and its impact on your itinerary</p>
+                            <p>• <strong>Proactive Communication:</strong> Reaching out to you promptly with information and options</p>
+                            <p>• <strong>Leveraging Local Contacts:</strong> Working with our on-the-ground partners for efficient resolution</p>
+                            <p>• <strong>Creative Problem-Solving:</strong> Developing alternative plans that maintain the quality of your experience</p>
+                            <p>• <strong>Seamless Implementation:</strong> Handling all rebooking and arrangements on your behalf</p>
+                            <p>• <strong>Documentation for Insurance:</strong> Providing necessary paperwork for potential claims</p>
+                            <p>From flight cancellations to unexpected closures or health issues, our extensive experience and global network allow us to transform potential disruptions into minimal inconveniences. Our goal is always to protect the integrity of your travel experience while minimizing stress during unexpected situations.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="travel-summary">
+            <h2>Discover Bespoke Travel Experiences with Vessy Travel</h2>
+            <p>At Vessy Travel, we believe that extraordinary journeys begin with exceptional planning. As a boutique travel agency based in Greater Houston, Texas, we specialize in crafting luxury adventures tailored precisely to your preferences and dreams.</p>
+            <p>Whether you're imagining a wildlife safari in Tanzania, a cultural exploration of European capitals, a relaxing Caribbean getaway, or an adventure to remote destinations, our expertise and attention to detail ensure your experience exceeds expectations.</p>
+            <p>We pride ourselves on our strong local connections worldwide, which allow us to offer unique experiences not available to the general public. From exclusive access to historical sites to private dining with renowned chefs, we transform good vacations into unforgettable journeys.</p>
+            <p>Families, couples, solo travelers, and groups all benefit from our personalized approach and comprehensive support. From the first consultation through your return home, we're committed to crafting travel experiences that reflect your unique interests and create lasting memories.</p>
+            <p>Let Vessy Travel handle the complexities of planning so you can focus on the joy of discovery. Your dream journey awaits – contact us today to begin crafting your next extraordinary adventure.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Vessy Travel LLC</p>
+            <p>Greater Houston, Texas</p>
+            <p>Email: info@vessytravel.com</p>
+            <p>Website: <a href="https://www.vessytravel.com" target="_blank">www.vessytravel.com</a></p>
+            <p>&copy; Vessy Travel LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Accordion functionality
+            const questions = document.querySelectorAll('.accordion-question');
+
+            questions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const isOpen = question.getAttribute('aria-expanded') === 'true';
+
+                    // Close all other accordions in the same FAQ box
+                    const faqBox = question.closest('.faq-box');
+                    faqBox.querySelectorAll('.accordion-question').forEach(q => {
+                        if (q !== question) {
+                            q.setAttribute('aria-expanded', 'false');
+                            q.classList.remove('active');
+                            q.nextElementSibling.style.maxHeight = null;
+                        }
+                    });
+
+                    // Toggle the clicked accordion
+                    question.setAttribute('aria-expanded', !isOpen);
+                    question.classList.toggle('active');
+
+                    if (!isOpen) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        answer.style.maxHeight = null;
+                    }
+                });
+            });
+
+            // Scroll to FAQ section
+            window.scrollToFAQ = () => {
+                const faqSection = document.getElementById('faq-section');
+                faqSection.scrollIntoView({ behavior: 'smooth' });
+            };
+        });
+    </script>
+</body>
+</html>
