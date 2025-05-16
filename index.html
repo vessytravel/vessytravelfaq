@@ -3,574 +3,489 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frequently Asked Questions - Vessy Travel</title>
-    <meta name="description" content="Find answers to common questions about luxury travel planning, destinations, and services offered by Vessy Travel LLC, your boutique travel agency based in Greater Houston, Texas.">
-    <meta name="keywords" content="Vessy Travel FAQ, luxury travel, travel planning, boutique travel agency, African safaris, European tours, Caribbean resorts">
-    <meta name="author" content="Vessy Travel LLC">
-    <meta name="robots" content="index, follow">
-        <link rel="canonical" href="https://vessytravelfaq.pages.dev/" />
+    <title>Vessy Travel - Luxury Travel Experiences Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css">
     <style>
-         :root {
-            --primary-color: #19566b; 
-            --secondary-color: #3a8bbb; /* Light blue from Vessy Travel */
-            --accent-color: #0d7ea2; /* Medium blue from Vessy Travel */
-            --text-color: #333;
-            --bg-color: #f4f4f4;
-            --white: #fff;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            color: #333;
             line-height: 1.6;
-            background-color: var(--bg-color);
-            color: var(--text-color);
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        /* Header */
-        header {
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 40px 0;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        header p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        /* FAQ Navigation Boxes */
-        .faq-nav {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            margin-bottom: 40px;
-            padding: 20px 0;
-        }
-        .faq-nav-box {
-            background: var(--white);
-            border-radius: 6px;
-            border: 2px solid var(--accent-color);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 15px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .faq-nav-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-        .faq-nav-box h3 {
-            font-size: 1rem;
-            color: var(--text-color);
-            margin: 0;
-        }
-        /* Blog Post */
-        .blog-post {
-            background: var(--white);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-        }
-        .blog-post h1 {
-            color: var(--text-color);
-            text-align: center;
-        }
-        .blog-post p {
-            color: #555;
-        }
-        /* FAQ Section */
-        .faq-container {
-            padding: 40px 0;
-        }
-        .faq-container h1 {
-            text-align: center;
-            color: var(--text-color);
-            margin-bottom: 40px;
-        }
-        .faq-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .faq-box {
-            background: var(--white);
-            border-radius: 8px;
-            border: 2px solid var(--accent-color);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .faq-box h3 {
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        .accordion {
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 10px;
-        }
-        .accordion-question {
-            background: none;
-            border: none;
-            width: 100%;
-            text-align: left;
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--text-color);
-            padding: 15px 0;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .accordion-question::after {
-            content: '\25BC';
-            font-size: 0.8rem;
+        
+        .blog-card {
             transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .accordion-question.active::after {
-            transform: rotate(180deg);
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
         }
-        .accordion-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            color: #555;
-            padding: 0 15px;
+        
+        .read-more-btn {
+            background-color: #4a90e2;
+            transition: background-color 0.3s ease;
         }
-        .accordion-answer p {
-            margin: 15px 0;
+        
+        .read-more-btn:hover {
+            background-color: #3a7bc8;
         }
-        /* Footer */
-        footer {
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 20px 0;
-            text-align: center;
+
+        .nav-link {
+            position: relative;
         }
-        footer p {
-            margin: 5px 0;
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #4a90e2;
+            transition: width 0.3s ease;
         }
-        footer a {
-            color: var(--white);
-            text-decoration: underline;
+        
+        .nav-link:hover::after {
+            width: 100%;
         }
-        footer a:hover {
-            text-decoration: none;
+
+        .category-badge {
+            background-color: #e6f0f9;
+            color: #4a90e2;
         }
-        /* Travel Summary Section */
-        .travel-summary {
-            margin-top: 50px;
-            margin-bottom: 50px;
-            border: 2px solid var(--accent-color);
-            padding: 30px;
-            background-color: var(--white);
-            border-radius: 8px;
-        }
-        .travel-summary h2 {
-            font-size: 1.8rem;
-            text-align: center;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-        .travel-summary p {
-            margin-bottom: 15px;
-        }
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.8rem;
+        
+        @media (max-width: 640px) {
+            .mobile-menu {
+                display: none;
             }
-            header p {
-                font-size: 1rem;
-            }
-            .faq-nav {
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            }
-            .faq-nav-box h3 {
-                font-size: 0.9rem;
-            }
-            .faq-grid {
-                grid-template-columns: 1fr;
-            }
-            .faq-box {
-                padding: 15px;
-            }
-            .accordion-question {
-                font-size: 1rem;
+            
+            .mobile-menu.active {
+                display: block;
             }
         }
     </style>
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Frequently Asked Questions About Vessy Travel</h1>
-            <p>Find answers to common questions about our luxury travel services, destinations, and planning process. We're dedicated to creating bespoke adventures tailored to your unique preferences.</p>
+<body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md">
+        <!-- Top Bar -->
+        <div class="bg-gray-800 text-white">
+            <div class="container mx-auto px-4 py-2 flex justify-between items-center flex-wrap">
+                <div class="flex items-center space-x-4">
+                    <a href="/cdn-cgi/l/email-protection#5f293a2c2c261f293a2c2c262b2d3e293a33713c3032" class="flex items-center text-sm">
+                        <i class="fas fa-envelope mr-2"></i> <span class="__cf_email__" data-cfemail="90e6f5e3e3e9d0e6f5e3e3e9e4e2f1e6f5fcbef3fffd">[email&#160;protected]</span>
+                    </a>
+                    <a href="tel:+18322591737" class="flex items-center text-sm">
+                        <i class="fas fa-phone-alt mr-2"></i> +1 832-259-1737
+                    </a>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <a href="#" class="text-white hover:text-blue-300"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white hover:text-blue-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white hover:text-blue-300"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Header -->
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-blue-600">Vessy Travel</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="nav-link font-medium text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#" class="nav-link font-medium text-gray-700 hover:text-blue-600">About Us</a>
+                    <a href="#" class="nav-link font-medium text-gray-700 hover:text-blue-600">Destinations</a>
+                    <a href="#" class="nav-link font-medium text-blue-600 border-b-2 border-blue-600">Travel Blog</a>
+                    <a href="#" class="nav-link font-medium text-gray-700 hover:text-blue-600">Contact Us</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="mobile-menu md:hidden mt-4 pb-4">
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">About Us</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Destinations</a>
+                <a href="#" class="block py-2 text-blue-600 font-medium">Travel Blog</a>
+                <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Contact Us</a>
+            </div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container">
-        <!-- FAQ Navigation Boxes -->
-        <nav class="faq-nav">
-            <div class="faq-nav-box" onclick="scrollToFAQ()">
-                <h3>About Vessy Travel</h3>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Discover the World Your Way</h1>
+                <p class="text-xl mb-8">Bespoke Adventures, Seamless Journeys. From African safaris to luxury Europe trips, we craft unique vacations tailored to you!</p>
+                <div class="flex justify-center">
+                    <form class="flex w-full max-w-md">
+                        <input type="text" placeholder="Search destinations..." class="w-full px-4 py-2 rounded-l-md focus:outline-none">
+                        <button class="bg-blue-600 hover:bg-blue-500 px-6 py-2 rounded-r-md focus:outline-none transition">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="faq-nav-box" onclick="scrollToFAQ()">
-                <h3>Travel Planning Process</h3>
+        </div>
+    </section>
+
+
+    <!-- Featured Destinations -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Featured Destinations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Featured Destination 1 -->
+                <div class="blog-card bg-white rounded-lg overflow-hidden">
+                    <img src="https://static.wixstatic.com/media/8df472_75b4851aec1c4dcaaf62238ea195439f~mv2.jpg/v1/fill/w_530,h_374,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/African%20Safaris.jpg" alt="African Safaris" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="category-badge text-xs font-semibold px-2 py-1 rounded-full">Safari</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">African Safari Adventures</h3>
+                        <p class="text-gray-600 mb-4">Witness the Big Five in their natural habitat, explore the Serengeti, or cruise through the Okavango Delta. Our tailor-made safari experiences offer the perfect balance of adventure and luxury.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Featured Destination</span>
+                            <a href="#" class="read-more-btn text-white px-4 py-2 rounded-md">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Destination 2 -->
+                <div class="blog-card bg-white rounded-lg overflow-hidden">
+                    <img src="https://static.wixstatic.com/media/8df472_f44f77a3139d4c639f1623070525b811~mv2.jpg/v1/fill/w_530,h_374,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Caribbean%20Luxury%20Resorts.jpg" alt="Caribbean Luxury" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="category-badge text-xs font-semibold px-2 py-1 rounded-full">Luxury</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Caribbean Luxury Resorts</h3>
+                        <p class="text-gray-600 mb-4">Relax in exclusive beachfront villas, enjoy world-class amenities, and experience tropical bliss in Antigua or St. Barths. Our Caribbean packages offer the perfect escape from everyday life.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Featured Destination</span>
+                            <a href="#" class="read-more-btn text-white px-4 py-2 rounded-md">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Destination 3 -->
+                <div class="blog-card bg-white rounded-lg overflow-hidden">
+                    <img src="https://static.wixstatic.com/media/8df472_1f1e873bc5ec4327ac6ede38332309b8~mv2.jpg/v1/fill/w_530,h_374,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/European%20Historical%20Tours.jpg" alt="European Tours" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="category-badge text-xs font-semibold px-2 py-1 rounded-full">Cultural</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">European Historical Tours</h3>
+                        <p class="text-gray-600 mb-4">Walk through ancient ruins in Rome, visit medieval castles in Scotland, and explore the rich heritage of Paris. Our European tours combine luxury accommodations with immersive cultural experiences.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Featured Destination</span>
+                            <a href="#" class="read-more-btn text-white px-4 py-2 rounded-md">Explore More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="faq-nav-box" onclick="scrollToFAQ()">
-                <h3>Destinations & Experiences</h3>
+        </div>
+    </section>
+
+    <!-- Main Blog Section -->
+    <section class="py-12 bg-bg-color">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-2 text-center">Latest Travel Insights</h2>
+            <p class="text-gray-600 mb-8 text-center">Discover travel tips, destination guides, and adventure stories from our expert team</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="blog-card bg-white rounded-lg overflow-hidden">
+                    <img src="https://static.wixstatic.com/media/8df472_2ec1a21e85864e4c946477b3227ba379~mv2.jpg/v1/fill/w_530,h_374,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Cambodia-Itinerary.jpg" alt="Cambodia Itinerary" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="category-badge text-xs font-semibold px-2 py-1 rounded-full">Asia</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Cambodia Itinerary: A Perfect 10-Day Journey</h3>
+                        <p class="text-gray-600 mb-4">Wander through the breathtaking Angkor Wat, cruise along the peaceful Mekong River, and dive into Cambodia's fascinating history and culture with our carefully crafted itinerary...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">June 15, 2023</span>
+                            <a href="#" class="read-more-btn text-white px-4 py-2 rounded-md">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="blog-card bg-white rounded-lg overflow-hidden">
+                    <img src="https://static.wixstatic.com/media/8df472_863fdb388a1b460d982bc93e42f3c56d~mv2.jpg/v1/fill/w_530,h_374, Logos
+al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/sri-lanka-highlights.jpg" alt="Sri Lanka Highlights" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="category-badge text-xs font-semibold px-2 py-1 rounded-full">Asia</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Sri Lanka Highlights: The Pearl of the Indian Ocean</h3>
+                        <p class="text-gray-600 mb-4">Wander through ancient temples, relax on stunning beaches, and sip the finest tea in lush hill country. Explore bustling cities, go on a wild safari, and soak in the island's vibrant culture...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">May 22, 2023</span>
+                            <a href="#" class="read-more-btn text-white px-4 py-2 rounded-md">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="blog-card bg-white rounded-lg overflow-hidden">
+                    <img src="https://static.wixstatic.com/media/01ef68_da984a8d9be048879e3155277c3832e9~mv2.jpg/v1/crop/x_154,y_0,w_269,h_377/fill/w_377,h_528,al_c,lg_1,q_80,enc_avif,quality_auto/paradise%20smaller.jpg" alt="Family Vacation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="category-badge text-xs font-semibold px-2 py-1 rounded-full">Family</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Creating the Perfect Family Vacation: A Guide</h3>
+                        <p class="text-gray-600 mb-4">Planning a family vacation that satisfies everyone can be challenging. Learn our expert tips for choosing destinations, accommodations, and activities that will create lasting memories...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">April 12, 2023</span>
+                            <a href="#" class="read-more-btn text-white px-4 py-2 rounded-md">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="blog-card bg-white rounded-lg overflow-hidden">
+                    <img src="https://static.wixstatic.com/media/8df472_75b4851aec1c4dcaaf62238ea195439f~mv2.jpg/v1/fill/w_530,h_374,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/African%20Safaris.jpg" alt="Safari Tips" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="category-badge text-xs font-semibold px-2 py-1 rounded-full">Safari</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Safari Packing Essentials: What You Really Need</h3>
+                        <p class="text-gray-600 mb-4">Preparing for an African safari requires thoughtful packing. Our comprehensive guide covers everything from clothing and camera gear to medications and travel documents...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">March 5, 2023</span>
+                            <a href="#" class="read-more-btn text-white px-4 py-2 rounded-md">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 5 -->
+                <div class="blog-card bg-white rounded-lg overflow-hidden">
+                    <img src="https://static.wixstatic.com/media/8df472_f44f77a3139d4c639f1623070525b811~mv2.jpg/v1/fill/w_530,h_374,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Caribbean%20Luxury%20Resorts.jpg" alt="Caribbean Guide" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="category-badge text-xs font-semibold px-2 py-1 rounded-full">Luxury</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Caribbean Island Comparison: Finding Your Perfect Match</h3>
+                        <p class="text-gray-600 mb-4">With so many beautiful Caribbean islands to choose from, finding the right one can be overwhelming. Our island-by-island guide helps you match your travel style with the perfect destination...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">February 18, 2023</span>
+                            <a href="#" class="read-more-btn text-white px-4 py-2 rounded-md">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 6 -->
+                <div class="blog-card bg-white rounded-lg overflow-hidden">
+                    <img src="https://static.wixstatic.com/media/8df472_1f1e873bc5ec4327ac6ede38332309b8~mv2.jpg/v1/fill/w_530,h_374,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/European%20Historical%20Tours.jpg" alt="Europe Travel" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="category-badge text-xs font-semibold px-2 py-1 rounded-full">Cultural</span>
+                        <h3 class="text-xl font-bold mt-2 mb-3">European Travel: Off-Season Advantages and Hidden Gems</h3>
+                        <p class="text-gray-600 mb-4">Discover the benefits of traveling to Europe during the shoulder seasons, including lower prices, fewer crowds, and more authentic experiences. Plus, we reveal some lesser-known destinations...</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">January 25, 2023</span>
+                            <a href="#" class="read-more-btn text-white px-4 py-2 rounded-md">Read More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="faq-nav-box" onclick="scrollToFAQ()">
-                <h3>Pricing & Booking</h3>
+            
+            <!-- Pagination -->
+            <div class="mt-12 flex justify-center">
+                <nav class="inline-flex rounded-md shadow">
+                    <a href="#" class="px-4 py-2 bg-white border text-sm font-medium text-text-color hover:bg-gray-50">Previous</a>
+                    <a href="#" class="px-4 py-2 bg-secondary-color border text-sm font-medium text-white">1</a>
+                    <a href="#" class="px-4 py-2 bg-white border text-sm font-medium text-text-color hover:bg-gray-50">2</a>
+                    <a href="#" class="px-4 py-2 bg-white border text-sm font-medium text-text-color hover:bg-gray-50">3</a>
+                    <a href="#" class="px-4 py-2 bg-white border text-sm font-medium text-text-color hover:bg-gray-50">Next</a>
+                </nav>
             </div>
-            <div class="faq-nav-box" onclick="scrollToFAQ()">
-                <h3>Special Requests & Customization</h3>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4">About Vessy Travel</h2>
+                    <p class="mb-4 text-gray-700">Vessy Travel LLC is a boutique travel agency based in Greater Houston - Texas. We specialize in custom-tailored, luxury adventures that are perfectly matched to your needs and preferences.</p>
+                    <p class="mb-4 text-gray-700">Whether you dream of visiting Europe, experiencing the magic of Africa, embarking on a voyage to Antarctica, or discovering a lesser-known destination, we are here to help! Just give us a travel planning challenge, and we'll gladly take it on!</p>
+                    <div class="mt-6">
+                        <h3 class="text-xl font-bold mb-2">We LOVE to work with:</h3>
+                        <ul class="list-disc pl-5 text-gray-700">
+                            <li>Families</li>
+                            <li>Groups</li>
+                            <li>Honeymooners</li>
+                            <li>Solo Travelers</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-bg-color p-6 rounded-lg text-center border border-primary-color">
+                            <div class="text-secondary-color text-4xl mb-2">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h3 class="font-bold mb-1">Expert Destination Knowledge</h3>
+                            <p class="text-sm text-gray-600">In-depth insights for unique experiences</p>
+                        </div>
+                        <div class="bg-bg-color p-6 rounded-lg text-center border border-primary-color">
+                            <div class="text-secondary-color text-4xl mb-2">
+                                <i class="fas fa-concierge-bell"></i>
+                            </div>
+                            <h3 class="font-bold mb-1">Personalized Service</h3>
+                            <p class="text-sm text-gray-600">Tailored travel experiences for you</p>
+                        </div>
+                        <div class="bg-bg-color p-6 rounded-lg text-center border border-primary-color">
+                            <div class="text-secondary-color text-4xl mb-2">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h3 class="font-bold mb-1">Local Connections</h3>
+                            <p class="text-sm text-gray-600">Strong partnerships with local providers</p>
+                        </div>
+                        <div class="bg-bg-color p-6 rounded-lg text-center border border-primary-color">
+                            <div class="text-secondary-color text-4xl mb-2">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3 class="font-bold mb-1">24/7 Support</h3>
+                            <p class="text-sm text-gray-600">Assistance throughout your journey</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="faq-nav-box" onclick="scrollToFAQ()">
-                <h3>Travel Support & Assistance</h3>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 bg-primary-color text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Plan Your Dream Vacation?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Let us craft a personalized travel experience that exceeds your expectations. Contact our team of experts today to begin your journey.</p>
+            <a href="#" class="bg-black text-primary-color hover:bg-gray-100 px-6 py-3 rounded-md font-bold inline-block transition border border-primary-color">Start Planning Now</a>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-12 bg-bg-color">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white rounded-lg p-8 text-center shadow-md border border-primary-color">
+                    <div class="inline-flex items-center justify-center w-16 h-16 mb-6 bg-bg-color rounded-full text-secondary-color text-2xl font-bold border border-primary-color">1</div>
+                    <h3 class="text-xl font-bold mb-4">Consultation</h3>
+                    <p class="text-gray-600">Imagine your dream trip and share all the details, including destination, dates, occasion, and preferences.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-white rounded-lg p-8 text-center shadow-md border border-primary-color">
+                    <div class="inline-flex items-center justify-center w-16 h-16 mb-6 bg-bg-color rounded-full text-secondary-color text-2xl font-bold border border-primary-color">2</div>
+                    <h3 class="text-xl font-bold mb-4">Customization</h3>
+                    <p class="text-gray-600">We handle all the research and planning, creating a personalized itinerary that fits your needs and preferences.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-white rounded-lg p-8 text-center shadow-md border border-primary-color">
+                    <div class="inline-flex items-center justify-center w-16 h-16 mb-6 bg-bg-color rounded-full text-secondary-color text-2xl font-bold border border-primary-color">3</div>
+                    <h3 class="text-xl font-bold mb-4">Booking & Support</h3>
+                    <p class="text-gray-600">Once you approve the plan, we book everything for you and provide support throughout your journey.</p>
+                </div>
             </div>
-        </nav>
+        </div>
+    </section>
 
-        <section id="faq-section" class="faq-container">
-            <h2 class="text-2xl font-bold text-center mb-10">Your Questions Answered</h2>
-            <div class="faq-grid">
-                <section class="faq-box">
-                    <h3>About Vessy Travel</h3>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">What is Vessy Travel?</button>
-                        <div class="accordion-answer">
-                            <p>Vessy Travel LLC is a boutique travel agency based in Greater Houston, Texas. We specialize in custom-tailored, luxury adventures that are perfectly matched to your needs and preferences. Our expertise spans across a wide range of destinations including Europe, Africa, Antarctica, and many lesser-known locations around the world.</p>
-                            <p>As a dedicated luxury travel agency, we pride ourselves on creating unique experiences that go beyond the standard vacation. We work closely with each client to understand their travel dreams and preferences, then craft journeys that exceed expectations.</p>
-                        </div>
+    <!-- Testimonials Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
+            <div class="max-w-4xl mx-auto bg-bg-color p-8 rounded-lg shadow-md border border-primary-color">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/3">
+                        <img src="https://static.wixstatic.com/media/01ef68_da984a8d9be048879e3155277c3832e9~mv2.jpg/v1/crop/x_154,y_0,w_269,h_377/fill/w_377,h_528,al_c,lg_1,q_80,enc_avif,quality_auto/paradise%20smaller.jpg" alt="Family Vacation" class="rounded-lg w-full border border-primary-color">
                     </div>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">What types of travelers do you work with?</button>
-                        <div class="accordion-answer">
-                            <p>At Vessy Travel, we love working with diverse clients who appreciate personalized travel experiences. Our services are particularly well-suited for:</p>
-                            <p>• Families seeking memorable vacations with age-appropriate activities</p>
-                            <p>• Groups looking for seamless coordination of multi-traveler itineraries</p>
-                            <p>• Honeymooners desiring romantic and unforgettable experiences</p>
-                            <p>• Solo travelers wanting safe, enriching, and well-planned adventures</p>
-                            <p>Whether you're celebrating a special occasion, planning an annual family trip, or embarking on a solo adventure, we're equipped to design the perfect journey for your specific needs.</p>
-                        </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-4">Best family vacation ever!</h3>
+                        <p class="text-gray-600 mb-6">Before working with Vessy, our experiences going to the beach and staying in resorts were pretty average - too noisy, bad room, waiting too long to check in, bad food, lack of good activities for children, etc. Not to mention, figuring out and arranging all the details ourselves was so overwhelming and daunting.</p>
+                        <p class="text-gray-600 mb-6">Working with Vessy has completely changed our concept of a family vacation. She always asked us the right questions and understood exactly what we needed. She went above and beyond to arrange every detail (like making sure we had a proper child seat in the shuttle from the airport). Unlike our previous vacations, everything went so smoothly this time around, and we are looking forward to getting Vessy's help again for our next vacation!</p>
+                        <p class="font-bold">Omar H. A. - Houston, TX | Traveled to Playa Del Carmen ~ Quintana Roo ~ Mexico</p>
                     </div>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">What makes Vessy Travel different from other travel agencies?</button>
-                        <div class="accordion-answer">
-                            <p>Vessy Travel stands out through our deeply personalized approach to travel planning. Unlike larger agencies, we take the time to truly understand your preferences, travel style, and aspirations. We pride ourselves on:</p>
-                            <p>• Strong local connections in destinations worldwide, giving you access to authentic experiences</p>
-                            <p>• Meticulous attention to detail in every aspect of your journey</p>
-                            <p>• A genuine passion for creating transformative travel experiences</p>
-                            <p>• Comprehensive support before, during, and after your travels</p>
-                            <p>• Exclusive focus on quality over quantity - we limit our client base to ensure exceptional service</p>
-                            <p>Our clients consistently tell us that our personalized approach and dedication to excellence create travel experiences that far exceed their expectations.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="faq-box">
-                    <h3>Travel Planning Process</h3>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">How does the travel planning process work?</button>
-                        <div class="accordion-answer">
-                            <p>Our travel planning process is designed to be thorough yet straightforward:</p>
-                            <p><strong>1. Consultation:</strong> We begin with an in-depth conversation about your travel dreams, preferences, budget, and any special requirements. This helps us understand exactly what you're looking for.</p>
-                            <p><strong>2. Customization:</strong> Based on our consultation, we research and design a personalized itinerary tailored specifically to your needs. This includes accommodations, activities, transportation, and special experiences.</p>
-                            <p><strong>3. Refinement:</strong> We present the proposed itinerary to you and make any adjustments needed until it perfectly matches your vision.</p>
-                            <p><strong>4. Booking:</strong> Once you approve the final plan, we handle all the reservations and logistics, ensuring everything is confirmed and organized.</p>
-                            <p><strong>5. Support:</strong> Throughout your journey, we provide ongoing support and assistance, addressing any questions or concerns that may arise.</p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">How far in advance should I start planning my trip?</button>
-                        <div class="accordion-answer">
-                            <p>For the best experience and most options, we recommend starting your travel planning process:</p>
-                            <p>• 9-12 months ahead for peak-season travel, special occasions like honeymoons, or trips to destinations with limited accommodations</p>
-                            <p>• 6-9 months ahead for most international journeys</p>
-                            <p>• 3-6 months ahead for less complex domestic trips</p>
-                            <p>Planning well in advance allows us to secure the best accommodations, expert guides, and exclusive experiences that might otherwise be unavailable. It also gives us time to carefully craft every detail of your journey.</p>
-                            <p>That said, we understand that sometimes travel opportunities arise unexpectedly. We're always happy to work with shorter timeframes when necessary and will do our utmost to create an exceptional experience regardless of the planning window.</p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">What information do you need from me to start planning?</button>
-                        <div class="accordion-answer">
-                            <p>To begin crafting your perfect journey, we'll need some essential information:</p>
-                            <p>• Destination interests or specific locations you wish to visit</p>
-                            <p>• Approximate travel dates and duration</p>
-                            <p>• Number of travelers and their ages (if traveling with children)</p>
-                            <p>• Accommodation preferences (luxury hotels, boutique properties, villas, etc.)</p>
-                            <p>• Special interests or activities you'd like to experience</p>
-                            <p>• Previous travel experiences you've particularly enjoyed</p>
-                            <p>• Budget guidelines to help us plan appropriately</p>
-                            <p>• Any mobility considerations or special requirements</p>
-                            <p>The more details you can provide, the better we can tailor our recommendations to match your preferences. Don't worry if you're unsure about some aspects—part of our job is helping you explore the possibilities!</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="faq-box">
-                    <h3>Destinations & Experiences</h3>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">What destinations do you specialize in?</button>
-                        <div class="accordion-answer">
-                            <p>At Vessy Travel, we offer expertise in a wide range of destinations across the globe. Some of our key specialties include:</p>
-                            <p>• <strong>African Safaris:</strong> Expertly planned wildlife experiences in destinations like Tanzania, Kenya, South Africa, and Botswana</p>
-                            <p>• <strong>European Tours:</strong> From historical explorations in Italy, France, and the UK to off-the-beaten-path discoveries in Eastern Europe</p>
-                            <p>• <strong>Caribbean Luxury:</strong> Exclusive resorts and villa experiences in destinations like Antigua, St. Barths, and other tropical paradises</p>
-                            <p>• <strong>Asian Adventures:</strong> Cultural immersion in countries like Cambodia, Sri Lanka, Japan, and Thailand</p>
-                            <p>• <strong>South American Journeys:</strong> From Machu Picchu to Patagonia and the Amazon</p>
-                            <p>We also regularly arrange travel to Antarctica, Australia, New Zealand, and many other destinations. If you have a specific location in mind that isn't listed here, please ask—we likely have experience there or can leverage our global network to create an exceptional experience for you.</p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">What types of travel experiences can you arrange?</button>
-                        <div class="accordion-answer">
-                            <p>We design a diverse array of travel experiences to match your interests and preferences:</p>
-                            <p>• <strong>Wildlife Adventures:</strong> Safari experiences, marine wildlife encounters, bird watching expeditions</p>
-                            <p>• <strong>Cultural Immersion:</strong> Guided historical tours, art explorations, cooking classes, local community interactions</p>
-                            <p>• <strong>Luxury Relaxation:</strong> Exclusive beach resorts, spa retreats, private villa stays</p>
-                            <p>• <strong>Active Adventures:</strong> Hiking, biking, water sports, golf vacations</p>
-                            <p>• <strong>Culinary Journeys:</strong> Food tours, wine region explorations, dining at renowned restaurants</p>
-                            <p>• <strong>Special Occasions:</strong> Honeymoons, milestone birthdays, anniversaries, family reunions</p>
-                            <p>• <strong>Educational Travel:</strong> Family learning experiences, student groups, special interest tours</p>
-                            <p>We excel at combining multiple types of experiences within a single journey, creating a balanced itinerary that reflects your interests while introducing you to new possibilities.</p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">Can you arrange family-friendly vacations?</button>
-                        <div class="accordion-answer">
-                            <p>Absolutely! Family vacations are one of our specialties. We understand that traveling with children of different ages requires thoughtful planning to ensure everyone has a memorable experience.</p>
-                            <p>Our family-friendly vacations include:</p>
-                            <p>• Accommodations with appropriate room configurations and amenities for families</p>
-                            <p>• Age-appropriate activities that engage children while still being enjoyable for adults</p>
-                            <p>• Educational experiences that are fun and interactive</p>
-                            <p>• Balanced itineraries with appropriate pacing for families</p>
-                            <p>• Transportation arrangements that consider the needs of children</p>
-                            <p>• Dining options that accommodate younger palates</p>
-                            <p>We take into account the ages and interests of your children to recommend destinations and experiences that will create lasting family memories. From safari adventures that captivate children of all ages to European explorations with interactive historical components, we can design the perfect family journey.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="faq-box">
-                    <h3>Pricing & Booking</h3>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">How does pricing work for your services?</button>
-                        <div class="accordion-answer">
-                            <p>Our pricing structure is designed to be transparent while reflecting the value of our personalized service:</p>
-                            <p>• We typically charge a planning fee that covers the extensive research, design, and coordination of your custom itinerary. This fee varies based on the complexity of the trip and number of travelers.</p>
-                            <p>• The total trip cost includes all accommodations, activities, specified meals, transfers, and other elements outlined in your final itinerary.</p>
-                            <p>• We provide a detailed breakdown of costs so you understand exactly what's included in your package.</p>
-                            <p>• Our relationships with luxury properties and experience providers often allow us to secure added amenities and perks not available to the general public, enhancing the value of your investment.</p>
-                            <p>We work with a range of budgets and are always upfront about costs. Our goal is to create extraordinary experiences that represent excellent value for the investment, focusing on quality rather than simply finding the lowest price.</p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">What is your payment and cancellation policy?</button>
-                        <div class="accordion-answer">
-                            <p>Our standard payment and cancellation policies are as follows, though they may vary slightly depending on specific supplier requirements:</p>
-                            <p><strong>Payment Schedule:</strong></p>
-                            <p>• Planning fee: Due at the time of engagement</p>
-                            <p>• Initial deposit: 25-30% of the total trip cost due upon approval of the itinerary</p>
-                            <p>• Final payment: Typically due 60-90 days before departure, depending on the destination</p>
-                            <p><strong>Cancellation Policy:</strong></p>
-                            <p>• Planning fees are non-refundable as they cover work already performed</p>
-                            <p>• 120+ days before departure: Full refund of deposit (minus any non-refundable elements)</p>
-                            <p>• 90-119 days: 75% refund of deposit</p>
-                            <p>• 60-89 days: 50% refund of deposit</p>
-                            <p>• Under 60 days: Non-refundable</p>
-                            <p>We strongly recommend purchasing comprehensive travel insurance to protect your investment. We can advise on appropriate insurance options for your specific journey.</p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">Do you offer travel insurance?</button>
-                        <div class="accordion-answer">
-                            <p>While we don't directly sell travel insurance, we strongly recommend it for all travelers and can connect you with reputable providers who offer comprehensive coverage.</p>
-                            <p>Quality travel insurance typically covers:</p>
-                            <p>• Trip cancellation and interruption</p>
-                            <p>• Emergency medical expenses and evacuation</p>
-                            <p>• Lost or delayed baggage</p>
-                            <p>• Travel delays</p>
-                            <p>• Certain COVID-19 related disruptions (policy dependent)</p>
-                            <p>We can help you assess your specific needs and recommend appropriate coverage levels based on your destination, activities, and other factors. This allows you to make an informed decision and secure the protection that's right for your journey.</p>
-                            <p>In today's unpredictable travel environment, insurance is an essential component of responsible travel planning, particularly for premium experiences with significant financial investment.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="faq-box">
-                    <h3>Special Requests & Customization</h3>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">Can you accommodate dietary restrictions or special needs?</button>
-                        <div class="accordion-answer">
-                            <p>Absolutely! We take pride in accommodating all dietary restrictions, medical requirements, and special needs to ensure your journey is comfortable and enjoyable.</p>
-                            <p>For dietary requirements, we:</p>
-                            <p>• Inform all accommodations and restaurants about your specific needs in advance</p>
-                            <p>• Select dining venues that can properly accommodate restrictions</p>
-                            <p>• Arrange private dining experiences with custom menus when appropriate</p>
-                            <p>• Provide recommendations for specialty food shops at your destination</p>
-                            <p>For mobility or other special needs, we:</p>
-                            <p>• Research and confirm accessibility at all accommodations and attractions</p>
-                            <p>• Arrange appropriate transportation throughout your journey</p>
-                            <p>• Modify activities and pacing to suit your specific requirements</p>
-                            <p>• Connect you with medical resources at your destination if needed</p>
-                            <p>Please share all relevant information during our initial consultation so we can make appropriate arrangements from the start of the planning process.</p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">Can you help plan special celebrations or surprise events?</button>
-                        <div class="accordion-answer">
-                            <p>Crafting memorable celebrations and surprise moments is one of our specialties! We delight in adding those extra-special touches that transform a great trip into an unforgettable experience.</p>
-                            <p>We can arrange a variety of special experiences such as:</p>
-                            <p>• Private dinners in extraordinary locations (beachfront, historic venues, underwater restaurants)</p>
-                            <p>• Anniversary celebrations with custom touches reflecting your journey together</p>
-                            <p>• Birthday surprises with personalized cakes and decorations</p>
-                            <p>• Proposal planning with photographers to capture the moment</p>
-                            <p>• Exclusive access to attractions outside normal hours</p>
-                            <p>• Private performances by local musicians or artists</p>
-                            <p>• Custom welcome gifts and amenities</p>
-                            <p>With our extensive network of local partners, we can create bespoke moments that perfectly match your vision. We're also experts at keeping secrets when planning surprise elements!</p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">Do you arrange group travel?</button>
-                        <div class="accordion-answer">
-                            <p>Yes, we specialize in planning sophisticated group travel experiences. Whether it's a family reunion, friends' getaway, corporate retreat, or special interest group, we have the expertise to coordinate complex multi-traveler itineraries.</p>
-                            <p>Our group travel planning includes:</p>
-                            <p>• Accommodations that keep your group appropriately connected while respecting privacy</p>
-                            <p>• Private transportation sized appropriately for your group</p>
-                            <p>• Group activities balanced with options for individual exploration</p>
-                            <p>• Private dining experiences and special events</p>
-                            <p>• Coordination of varying arrival/departure schedules</p>
-                            <p>• Management of different preferences within the group</p>
-                            <p>We excel at creating itineraries that satisfy diverse interests while maintaining the cohesive group experience you desire. For larger groups, we can also provide a custom website with trip details and updates to keep everyone informed.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="faq-box">
-                    <h3>Travel Support & Assistance</h3>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">What kind of support do you provide during my trip?</button>
-                        <div class="accordion-answer">
-                            <p>We provide comprehensive support throughout your journey to ensure peace of mind and swift resolution of any issues that may arise:</p>
-                            <p>• <strong>24/7 Emergency Assistance:</strong> Access to our team for urgent matters at any time during your travels</p>
-                            <p>• <strong>Detailed Documentation:</strong> Comprehensive digital and/or printed travel documents with all necessary information</p>
-                            <p>• <strong>Local Contacts:</strong> Direct connections to our on-the-ground partners at your destination</p>
-                            <p>• <strong>Proactive Monitoring:</strong> We track potential disruptions (weather, strikes, etc.) and adjust your plans as needed</p>
-                            <p>• <strong>Real-time Updates:</strong> Immediate notification of any changes to your itinerary</p>
-                            <p>• <strong>Problem Resolution:</strong> Swift intervention if accommodations, activities, or transportation don't meet expectations</p>
-                            <p>Our support extends from the moment you leave home until your safe return. We're never more than a message or call away, ready to assist with both emergencies and everyday questions or requests.</p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">What travel documents will I need?</button>
-                        <div class="accordion-answer">
-                            <p>Required travel documents vary by destination, but we provide detailed guidance throughout the planning process. Generally, you should be prepared with:</p>
-                            <p>• <strong>Passport:</strong> Valid for at least 6 months beyond your return date with sufficient blank pages</p>
-                            <p>• <strong>Visas:</strong> Required for many destinations; we'll advise on specific requirements and application procedures</p>
-                            <p>• <strong>Travel Insurance:</strong> Documentation of your policy</p>
-                            <p>• <strong>Vaccination Records:</strong> Including any destination-specific requirements</p>
-                            <p>• <strong>Driver's License:</strong> If you plan to drive (and possibly an International Driving Permit)</p>
-                            <p>• <strong>Travel Itinerary:</strong> Comprehensive documentation we provide with confirmations and contact information</p>
-                            <p>We'll provide a detailed checklist specific to your journey and can answer any questions about documentation requirements. For certain destinations, we can also arrange expedited visa services through our trusted partners.</p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <button class="accordion-question" aria-expanded="false">How do you handle unexpected issues during travel?</button>
-                        <div class="accordion-answer">
-                            <p>We approach unexpected issues with swift, solution-oriented action. Our process for handling travel disruptions includes:</p>
-                            <p>• <strong>Immediate Assessment:</strong> Quickly evaluating the situation and its impact on your itinerary</p>
-                            <p>• <strong>Proactive Communication:</strong> Reaching out to you promptly with information and options</p>
-                            <p>• <strong>Leveraging Local Contacts:</strong> Working with our on-the-ground partners for efficient resolution</p>
-                            <p>• <strong>Creative Problem-Solving:</strong> Developing alternative plans that maintain the quality of your experience</p>
-                            <p>• <strong>Seamless Implementation:</strong> Handling all rebooking and arrangements on your behalf</p>
-                            <p>• <strong>Documentation for Insurance:</strong> Providing necessary paperwork for potential claims</p>
-                            <p>From flight cancellations to unexpected closures or health issues, our extensive experience and global network allow us to transform potential disruptions into minimal inconveniences. Our goal is always to protect the integrity of your travel experience while minimizing stress during unexpected situations.</p>
-                        </div>
-                    </div>
-                </section>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="travel-summary">
-            <h2>Discover Bespoke Travel Experiences with Vessy Travel</h2>
-            <p>At Vessy Travel, we believe that extraordinary journeys begin with exceptional planning. As a boutique travel agency based in Greater Houston, Texas, we specialize in crafting luxury adventures tailored precisely to your preferences and dreams.</p>
-            <p>Whether you're imagining a wildlife safari in Tanzania, a cultural exploration of European capitals, a relaxing Caribbean getaway, or an adventure to remote destinations, our expertise and attention to detail ensure your experience exceeds expectations.</p>
-            <p>We pride ourselves on our strong local connections worldwide, which allow us to offer unique experiences not available to the general public. From exclusive access to historical sites to private dining with renowned chefs, we transform good vacations into unforgettable journeys.</p>
-            <p>Families, couples, solo travelers, and groups all benefit from our personalized approach and comprehensive support. From the first consultation through your return home, we're committed to crafting travel experiences that reflect your unique interests and create lasting memories.</p>
-            <p>Let Vessy Travel handle the complexities of planning so you can focus on the joy of discovery. Your dream journey awaits – contact us today to begin crafting your next extraordinary adventure.</p>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>Vessy Travel LLC</p>
-            <p>Greater Houston, Texas</p>
-            <p>Email: info@vessytravel.com</p>
-            <p>Website: <a href="https://www.vessytravel.com" target="_blank">www.vessytravel.com</a></p>
-            <p>&copy; Vessy Travel LLC. All rights reserved.</p>
+   <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Company Information -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Vessy Travel</h3>
+                    <p class="text-gray-400 mb-4">Vessy Travel LLC is a boutique travel agency specializing in custom-tailored, luxury adventures that are perfectly matched to your needs and preferences.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Destinations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Travel Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Destinations -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Popular Destinations</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">African Safaris</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Caribbean Resorts</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">European Tours</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Asian Adventures</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">South American Experiences</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">Sugar Land, Texas 77478</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">+1 832-259-1737</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                            <span class="text-gray-400"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a1d7c4d2d2d8e1d7c4d2d2d8d5d3c0d7c4cd8fc2cecc">[email&#160;protected]</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-gray-700 my-6">
+            
+            <!-- Copyright -->
+            <div class="text-center text-gray-400">
+                <p>© 2023 Vessy Travel LLC. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Accordion functionality
-            const questions = document.querySelectorAll('.accordion-question');
-
-            questions.forEach(question => {
-                question.addEventListener('click', () => {
-                    const answer = question.nextElementSibling;
-                    const isOpen = question.getAttribute('aria-expanded') === 'true';
-
-                    // Close all other accordions in the same FAQ box
-                    const faqBox = question.closest('.faq-box');
-                    faqBox.querySelectorAll('.accordion-question').forEach(q => {
-                        if (q !== question) {
-                            q.setAttribute('aria-expanded', 'false');
-                            q.classList.remove('active');
-                            q.nextElementSibling.style.maxHeight = null;
-                        }
-                    });
-
-                    // Toggle the clicked accordion
-                    question.setAttribute('aria-expanded', !isOpen);
-                    question.classList.toggle('active');
-
-                    if (!isOpen) {
-                        answer.style.maxHeight = answer.scrollHeight + 'px';
-                    } else {
-                        answer.style.maxHeight = null;
-                    }
-                });
-            });
-
-            // Scroll to FAQ section
-            window.scrollToFAQ = () => {
-                const faqSection = document.getElementById('faq-section');
-                faqSection.scrollIntoView({ behavior: 'smooth' });
-            };
+        // Toggle mobile menu
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('active');
         });
     </script>
 </body>
